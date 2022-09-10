@@ -20,6 +20,11 @@ app.get('/notes', (req, res) =>
     res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
+//Get current note list
+app.get('/api/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, '/db/db.json'))
+  });
+
 //POST request for save btn
 app.post('/api/notes', (req, res) => {
     // Log that a POST request was received
