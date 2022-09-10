@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
-const uuid = require('./public/assets/helpers/uuid');
-const db = require('./db/db.json');
+// const uuid = require('./public/assets/helpers/uuid');
+// const db = require('./db/db.json');
+const fs = require('fs');
 const PORT = 3001 ;
 
 const app = express();
@@ -10,6 +11,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
 app.use(express.static('public'));
+
+let jsonData =[];
 
 //Publish index.html
 app.get('/', (req, res) =>
@@ -39,15 +42,24 @@ app.post('/api/notes', (req, res) => {
       const newNote = {
         title,
         text,
-        note_id: uuid(),
       };
-  
-      const response = {
+
+    let rawData = fs.readFileSync(`./db/db.json`);
+    let parsedData = JSON.parse(rawData)
+
+    parsedData.push(newNote);
+    newData = JSON.stringify(parsedData, null, 2);      
+    
+    //write string
+    fs.writeFileSync(`./db/db.json`, newData);
+    console.log(`New Note has been written to JSON file`);
+
+    const response = {
         status: 'success',
         body: newNote,
-      };
+    };
   
-      console.log(response);
+    //   console.log(response);
       res.status(201).json(response);
     } else {
       res.status(500).json('Error in posting review');
