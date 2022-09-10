@@ -65,7 +65,7 @@ app.post('/api/notes', (req, res) => {
   });
 
 
-
+      // DELETE request
   app.delete('/api/notes/:id' , (req, res) => {
     console.info(`${req.method} request received to delete note`);
     
@@ -79,17 +79,11 @@ app.post('/api/notes', (req, res) => {
     fs.writeFileSync(`./db/db.json`, remainingData);
    
     res.send('Note Deleted');
-
-
   });
 
 
 
-
-
-
-
-
+  
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
