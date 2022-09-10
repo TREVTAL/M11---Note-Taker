@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-// const uuid = require('./public/assets/helpers/uuid');
+const uuid = require('./public/assets/helpers/uuid');
 // const db = require('./db/db.json');
 const fs = require('fs');
 const PORT = 3001 ;
@@ -11,8 +11,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
 app.use(express.static('public'));
-
-let jsonData =[];
 
 //Publish index.html
 app.get('/', (req, res) =>
@@ -42,6 +40,7 @@ app.post('/api/notes', (req, res) => {
       const newNote = {
         title,
         text,
+        id: uuid(),
       };
 
     let rawData = fs.readFileSync(`./db/db.json`);
