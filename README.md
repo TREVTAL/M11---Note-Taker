@@ -24,39 +24,31 @@ M11 Challenge, Note Taker has the following features:
 * When the delete button is clicked, the note is deleted
 
 ## Installation
-Team Profile Generator has the following installation instructions:
+No need to install, please visit the [app](https://trevtal-note-taker.herokuapp.com/) online
 
-* 1 Clone the Repository into your computer
-* 2 Install NODE.JS (if you already have, pass on to the next step)
-* 3 Open the terminal and run a `npm install`
-* 4 Open the file with `node index.js`
 
 ## Links
-[Repository](https://github.com/TREVTAL/M10---Profile-Generator)
+[Repository](https://github.com/TREVTAL/M11---Note-Taker)
 
-[Video](https://drive.google.com/file/d/1Uiy5UjOcoagaxJ8fcTR1iZ6tYZpUImLF/view)
+[Deployed App](https://trevtal-note-taker.herokuapp.com/)
 
 ## Usage
-Team Profile Generator has the following usage instructions
+Note Taker has the following usage instructions
 
-* 1 Open the terminal and go to the application’s folder
-* 2 open `index.js` using NODE.JS typing `node index.js` in your terminal
-* 3 Respond the first question that is the team's name
-* 4 Select the type of employee you wish to add
-* 5 Assuming you selected a employee type, fill in all requested information
-* 6 When you're done filling in the employee's data, you will be returned to the employee type selector
-* 7 When you're done, please use the last option that states you're done
-* 8 Find your team's webpage in the `dist` folder in your repository
+* To save a Note, it needs to have a title and body, after that, click the save button on the top right corner
+* To view a saved note, click it's title on the left hand side list
+* To start writing a new note, click the new note button (plus sign) on the top right corner
+* To delete a Note, click the delete button that's on the list on the left column
 
 ## Contributors
-Team Profile Generators' developer would like to give credit where credit is due. Thanks a lot to the following for their unmeasureable help
+Note Taker's developer would like to give credit where credit is due. Thanks a lot to the following for their unmeasureable help
 
 * 1 My wife and kid, their patience was most important 😍
-* AskBCS assistant John, without his help and patience, this code would've never worked. 😉
 * 2 My teachers Paco and Emmanuel, their guidance was essential
+* 3 2University for the Front End starter Code
 
 ## Test
-Test code is included in file. If you dominate jest, and can help me with the errors, I will be greatly thankfull. This project was specially hard to make all the npm modules work, and jest wasn't compatible with some of them. Feel free to contact me at my email `trevta@gmail.com` if you can figure out how to make this work. 😁
+No test available for this app
 
 ## License 
 This project is licensed under the [The Unlicense](https://choosealicense.com/licenses/unlicense/) license.
